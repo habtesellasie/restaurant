@@ -1,69 +1,27 @@
-import { useRef } from 'react';
+import pinkCircle from '/pink-circle.png';
+import strand from '/strand.png';
 
 const Navbar = () => {
-  const button = useRef(null);
-  const navMenu = useRef(null);
-
-  const openMenu = () => {
-    button.current.classList.toggle('open');
-    navMenu.current.classList.toggle('flex');
-    navMenu.current.classList.toggle('hidden');
-  };
   return (
-    <nav className='relative container mx-auto p-6'>
-      <div className='flex items-center justify-between'>
-        <div className='pt-2'>
-          <img src='/img/logo.svg' alt='' />
-        </div>
-        <div className='hidden md:flex space-x-6'>
-          <a href='#' className='hover:text-darkGrayishBlue'>
-            Pricing
+    <nav className='flex justify-center p-4 relative'>
+      <img src={pinkCircle} className='absolute top-0' alt='' />
+      <img
+        src={strand}
+        className='absolute top-0 right-0 max-w-[300px] xl:max-w-[400px]'
+        alt=''
+      />
+      <ul className='flex gap-4'>
+        <li>
+          <a href='/' className='bg-secondary-clr text-black py-1 px-2 rounded'>
+            Explore
           </a>
-          <a href='#' className='hover:text-darkGrayishBlue'>
-            Product
+        </li>
+        <li>
+          <a href='/' className='text-black py-1 px-2 rounded'>
+            Accomodations
           </a>
-          <a href='#' className='hover:text-darkGrayishBlue'>
-            About Us
-          </a>
-          <a href='#' className='hover:text-darkGrayishBlue'>
-            Careers
-          </a>
-          <a href='#' className='hover:text-darkGrayishBlue'>
-            Community
-          </a>
-        </div>
-        <a
-          href='#'
-          className='hidden md:block p-2 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight'
-        >
-          Get Started
-        </a>
-
-        <button
-          id='menu-btn'
-          ref={button}
-          className='block hamburger md:hidden focus:outline-none'
-          onClick={openMenu}
-        >
-          <span className='hamburger-top'></span>
-          <span className='hamburger-middle'></span>
-          <span className='hamburger-bottom'></span>
-        </button>
-      </div>
-
-      <div className='md:hidden'>
-        <div
-          id='menu'
-          ref={navMenu}
-          className='absolute flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md'
-        >
-          <a href='#'>Pricing</a>
-          <a href='#'>Product</a>
-          <a href='#'>About Us</a>
-          <a href='#'>Careers</a>
-          <a href='#'>Community</a>
-        </div>
-      </div>
+        </li>
+      </ul>
     </nav>
   );
 };

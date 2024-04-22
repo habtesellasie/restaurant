@@ -1,0 +1,20 @@
+{
+  "short_name": "The Project",
+  "name": "The Project",
+  "lang": "eng",
+  "display": "standalone",
+  "theme_color": "#f14561",
+  "background_color": "#fcfcfd",
+  "icon": [
+    {
+      "src": "/img/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
